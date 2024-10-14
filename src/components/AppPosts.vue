@@ -1,8 +1,13 @@
 <script>
+import SinglePost from './SinglePost.vue';
 import axios from 'axios';
 
 export default {
+    
     name: 'AppPosts',
+    components: {
+        SinglePost
+    },
     data(){
         return {
             posts: [],
@@ -41,21 +46,7 @@ export default {
             </div>
             <div class="col-12">
                 <div class="row">
-                    <div class="col-4" v-for="post in posts" :key="post.id">
-                        <div class="card">
-                            <img class="card-img-top" :src="post.cover_image.startsWith('http') ? post.cover_image : `http://127.0.0.1:8000/storage/${post.cover_image}`">
-                            <div class="card-body">
-                                <h3 class="card-title">{{ post.title }}</h3>
-                                <p v-if="post.category != null"><strong>Categoria: </strong>{{ post.category.name  }}</p>
-                                <ul v-if="post.tags != null" class="list-unstyled d-flex">
-                                    <li class="me-2" v-for="tag in post.tags" :key="tag.id">{{ tag.name }}</li>
-                                </ul>
-                                <p>
-                                    {{ post.content.substr(0, 100) + '...' }}
-                                </p>
-                            </div>
-                        </div>
-                    </div>
+                    <SinglePost v-for="post in posts" :key="post.id" :post="post" />
                 </div>
             </div>
             <div class="col-12">
