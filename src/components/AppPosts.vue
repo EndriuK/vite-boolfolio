@@ -5,7 +5,9 @@ export default {
     name: 'AppPosts',
     data(){
         return {
-            posts: []
+            posts: [],
+            first_page: 1,
+            last_page: null,
         }
     },
     created(){
@@ -17,6 +19,7 @@ export default {
                 console.log(response.data.results);
                 // this.posts = response.data.results; // questo se nel backend abbiamo messo Post::all();
                 this.posts = response.data.results.data;
+                this.last_page = response.data.results.last_page;
             });
         }
     }
@@ -42,6 +45,15 @@ export default {
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="col-12">
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination d-flex justify-content-center">
+                      <li class="page-item"><a class="page-link" href="#">Precedente</a></li>
+                      <li class="page-item" v-for="i in last_page"><a class="page-link" href="#"> {{ i }} </a></li>
+                      <li class="page-item"><a class="page-link" href="#">Successiva</a></li>
+                    </ul>
+                  </nav>
             </div>
         </div>
     </div>
