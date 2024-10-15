@@ -6,10 +6,10 @@ export const store = reactive({
       name: "homepage",
       label: "Home",
     },
-    // {
-    //   name: "about",
-    //   label: "Chi siamo",
-    // },
+    {
+      name: "about",
+      label: "Chi sono",
+    },
     {
       name: "blog",
       label: "Blog",
