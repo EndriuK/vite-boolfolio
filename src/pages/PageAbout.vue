@@ -61,9 +61,7 @@ export default {
                     Ciao! Mi chiamo Endrit Kaskija, ho 29 anni e vengo da La Spezia. Da qualche mese ho intrapreso un entusiasmante viaggio nel mondo della programmazione web, un campo che mi affascina sempre di più ogni giorno. Sono una persona curiosa e motivata, sempre pronta a mettermi in gioco per migliorarmi.
                 </p>
                 <p>
-                    Al di fuori della programmazione, nutro una grande passione per i motori, la fotografia e il design. Amo tutto ciò che è esteticamente bello e ben fatto. Nel tempo libero, mi dedico ad attività all'aperto come il trekking o una rilassante nuotata al mare, che mi aiutano a rigenerare mente e corpo.
-                </p>
-                <p>
+                    Al di fuori della programmazione, nutro una grande passione per i motori, la fotografia e il design.
                     La mia curiosità mi spinge a esplorare nuovi orizzonti e ad affrontare sfide che mi permettono di crescere sia a livello personale che professionale. Credo fermamente che ogni esperienza sia un'opportunità per migliorare e imparare qualcosa di nuovo.
                 </p>
             </div>
