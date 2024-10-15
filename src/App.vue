@@ -2,15 +2,13 @@
 // esiste
 
 import AppHeader from './components/AppHeader.vue';
-import AppPosts from './components/AppPosts.vue';
 
 
 export default {
   components: {
     //lo puoi utilizzare
     
-    AppHeader,
-    AppPosts,
+    AppHeader
   }
 }
 </script>
@@ -21,7 +19,7 @@ export default {
   <div>
 
     <AppHeader />
-    <AppPosts />
+    
 
   </div>
 </template>
