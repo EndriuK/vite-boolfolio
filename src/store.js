@@ -6,17 +6,21 @@ export const store = reactive({
       name: "homepage",
       label: "Home",
     },
-    {
-      name: "about",
-      label: "Chi siamo",
-    },
+    // {
+    //   name: "about",
+    //   label: "Chi siamo",
+    // },
     {
       name: "blog",
       label: "Blog",
     },
+    // {
+    //   name: "contacts",
+    //   label: "Contatti",
+    // },
     {
-      name: "contacts",
-      label: "Contatti",
+      name: "portfolio",
+      label: "Portfolio",
     },
   ],
 });

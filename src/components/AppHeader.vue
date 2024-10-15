@@ -17,7 +17,7 @@ export default {
                 <div class="col-12">
                     <ul class="list-unstyled d-flex justify-content-center">
                         <li class="mx-2" v-for="item, index in menu" :key="index">
-                            <a href="#">{{ item.label }}</a>
+                            <router-link :to="{name: item.name}">{{ item.label }}</router-link>
                         </li>
                         
                     </ul>
