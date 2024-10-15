@@ -1,5 +1,5 @@
 <script>
-import SinglePost from './SinglePost.vue';
+import SinglePost from '../components/SinglePost.vue';
 import axios from 'axios';
 
 export default {
@@ -40,12 +40,12 @@ export default {
 </script>
 <template lang="">
     <div class="container">
-        <div class="row gy-3">
+        <div class="row gy-4">
             <div class="col-12">
-                <h1 class="text-center">Elenco dei posts</h1>
+                <h1 class="text-center my-5">Elenco dei posts</h1>
             </div>
             <div class="col-12">
-                <div class="row">
+                <div class="row gy-4">
                     <SinglePost v-for="post in posts" :key="post.id" :post="post" />
                 </div>
             </div>

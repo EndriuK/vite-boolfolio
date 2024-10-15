@@ -1,6 +1,7 @@
 <script>
 // esiste
 
+import { store } from "./store.js";
 import AppHeader from './components/AppHeader.vue';
 
 
@@ -9,6 +10,11 @@ export default {
     //lo puoi utilizzare
     
     AppHeader
+  },
+  data(){
+    return {
+      store
+    }
   }
 }
 </script>
@@ -18,11 +24,11 @@ export default {
   
   <div>
 
-    <AppHeader />
-    
+    <AppHeader :menu="store.menuItems" />
+    <router-view></router-view>
 
   </div>
 </template>
 <style lang="scss">
-  @import './styles/generals.scss';
+  @use './styles/generals.scss';
 </style>
