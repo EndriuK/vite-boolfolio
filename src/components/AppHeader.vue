@@ -8,7 +8,9 @@ export default {
         <div class="container-fluid">
             <div class="row">
                 <div class="col-12">
-                    <img src="" />
+                    <div class="text-center">
+                        <img src="../../stitch_logo.png" class="logo" />
+                    </div>
                 </div>
                 <div class="col-12">
                     <ul class="list-unstyled d-flex justify-content-center">

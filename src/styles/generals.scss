@@ -1,2 +1,19 @@
 @import "../node_modules/bootstrap/scss/bootstrap";
 
+header{
+    background-color: #5050D5;
+
+    a{
+        color: #fff;
+        text-decoration: none;
+        &:hover{
+            color: #000;
+        }
+    }
+}
+
+.logo {
+    width: 200px;
+    height: 200px;
+    margin-top: 10px;
+}
