@@ -2,6 +2,7 @@
 import axios from 'axios';
 import { store } from "../store.js";
 
+
 export default {
     data(){
         return{
@@ -23,7 +24,7 @@ export default {
 }
 </script>
 <template lang="">
-    <div class="my-5">
+    <div class="my-5" v-if="post">
         <div class="container">
             <div class="row"> 
                 <div class="col-12 col-md-6 col-lg-4">
@@ -33,11 +34,11 @@ export default {
                     <div class="ms-2">
                         <h2 class="mb-3">{{ post.title }}</h2>
                         <p class="mb-3"><strong>Categoria</strong>: {{ post.category.name ? post.category.name : 'nessuna categoria' }}</p>
-                        <div v-if="post.tags">
+                        <div v-if="post.tags.length > 0">  
                             <div class="d-flex">
                                 <strong>Tag</strong>: 
                                 <ul class="ms-2 list-unstyled">
-                                    <li class="me-2 d-inline-block" v-for="tag in tags">{{ tag.name }}</li>
+                                    <li class="me-2 d-inline-block" v-for="tag in post.tags">{{ tag.name }}</li>
                                 </ul>
                             </div>
                         </div>
@@ -52,7 +53,11 @@ export default {
             </div>
         </div>
     </div>
+    <div v-else>
+        <p>Caricamento in corso...</p>
+    </div>
 </template>
+
 <style lang="">
     
 </style>
