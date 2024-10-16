@@ -4,6 +4,7 @@ import PageBlog from "./pages/PageBlog.vue";
 import PageHome from "./pages/PageHome.vue";
 import PagePortfolio from "./pages/PagePortfolio.vue";
 import PageAbout from "./pages/PageAbout.vue";
+import PageSinglePost from "./pages/PageSinglePost.vue";
 
 const router = createRouter({
   history: createWebHistory(),
@@ -17,6 +18,11 @@ const router = createRouter({
       path: "/blog",
       name: "blog",
       component: PageBlog,
+    },
+    {
+      path: "/blog/:slug",
+      name: "single-post",
+      component: PageSinglePost,
     },
     {
       path: "/portfolio",
