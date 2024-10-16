@@ -9,7 +9,6 @@ export default {
 </script>
 <template lang="">
     <div class="col-4">
-        <router-link class="text-decoration-none" :to="{name: 'single-post', params: {slug: post.slug} }">
             <div class="card">
                 <img class="card-img-top" :src="post.cover_image.startsWith('http') ? post.cover_image : `http://127.0.0.1:8000/storage/${post.cover_image}`">
                 <div class="card-body">
@@ -21,9 +20,11 @@ export default {
                     <p>
                         {{ post.content.substr(0, 100) + '...' }}
                     </p>
+                    <router-link class="text-decoration-none" :to="{name: 'single-post', params: {slug: post.slug} }">
+                        <button class="btn btn-primary">Leggi di più</button>
+                    </router-link>
                 </div>
             </div>
-        </router-link>
     </div>
 </template>
 <style lang="scss">
