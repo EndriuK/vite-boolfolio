@@ -1,6 +1,7 @@
 import { reactive } from "vue";
 
 export const store = reactive({
+  baseUrl: "http://127.0.0.1:800/api",
   menuItems: [
     {
       name: "homepage",
@@ -14,13 +15,13 @@ export const store = reactive({
       name: "blog",
       label: "Blog",
     },
-    // {
-    //   name: "contacts",
-    //   label: "Contatti",
-    // },
     {
       name: "portfolio",
       label: "Portfolio",
+    },
+    {
+      name: "contacts",
+      label: "Contatti",
     },
   ],
 });

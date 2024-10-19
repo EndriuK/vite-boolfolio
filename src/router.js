@@ -5,6 +5,7 @@ import PageHome from "./pages/PageHome.vue";
 import PagePortfolio from "./pages/PagePortfolio.vue";
 import PageAbout from "./pages/PageAbout.vue";
 import PageSinglePost from "./pages/PageSinglePost.vue";
+import PageContacts from "./pages/PageContacts.vue";
 
 const router = createRouter({
   history: createWebHistory(),
@@ -33,6 +34,11 @@ const router = createRouter({
       path: "/about",
       name: "about",
       component: PageAbout,
+    },
+    {
+      path: "/contacts",
+      name: "contacts",
+      component: PageContacts,
     },
   ],
 });
