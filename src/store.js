@@ -1,7 +1,7 @@
 import { reactive } from "vue";
 
 export const store = reactive({
-  baseUrl: "http://127.0.0.1:800/api",
+  baseUrl: "http://127.0.0.1:8000/api",
   menuItems: [
     {
       name: "homepage",
